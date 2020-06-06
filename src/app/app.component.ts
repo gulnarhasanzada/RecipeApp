@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'firstApp';
+  show = false;
+  arr = [];
+  loadedNav = 'recipe';
+
+  onNavigate(navName: string){
+    this.loadedNav = navName;
+  }
+
+  toggle(){
+
+    this.show = !this.show;
+    this.arr.push(Date.now());
+  }
 }
